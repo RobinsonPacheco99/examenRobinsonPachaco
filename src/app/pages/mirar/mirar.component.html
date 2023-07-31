@@ -1,0 +1,27 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Codigo de registro</th>
+                <th>Fecha</th>
+                <th>Cliente</th>
+                <th>Tipo de Interaccion</th>
+                <th>Descripcion</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of dataList">
+                <td>{{data.codigoregistro}}</td>
+                <td>{{data.fecha}}</td>
+                <td>{{data.cliente}}</td>
+                <td>{{data.tipodeinteraccion}}</td>
+                <td>{{data.descripcion}}</td>
+                <td>
+                    <button (click)="deleteRegistro(data.codigoregistro)"
+                        class="btn btn-danger">Borrar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
